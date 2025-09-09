@@ -1,0 +1,44 @@
+
+/* style.css aggiornato: uso dello stile delle immagini come riferimento, senza immagini */
+:root{
+  --bg:#eaf6ef;
+  --card:#ffffff;
+  --accent:#113a57;
+  --muted:#234e64;
+  --soft:#dff2e8;
+  --container:1100px;
+  --radius:12px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--muted);line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:18px}
+.site-header{background:var(--soft);padding:22px 0;border-bottom:4px solid rgba(17,58,87,0.06)}
+.header-inner{display:flex;align-items:center;gap:18px}
+.logo-box{width:76px;height:60px;position:relative;display:flex;align-items:center;justify-content:center}
+.roof{width:64px;height:16px;border-radius:4px;background:var(--accent);transform:skewX(-10deg);position:absolute;top:6px}
+.house{width:46px;height:30px;border-radius:4px;border:6px solid var(--accent);position:absolute;bottom:2px}
+.site-header h1{margin:0;font-size:1.4rem;color:var(--accent)}
+.site-header .brand{display:block;font-weight:700;font-size:1.9rem;letter-spacing:1px}
+
+.hero-card{display:flex;align-items:center;gap:18px;margin:18px 0;padding:18px;background:linear-gradient(90deg,var(--card),#f6fbf9);border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+.hero-left h2{margin:0;color:var(--accent);text-transform:uppercase}
+.hero-left p{margin-top:8px}
+
+.hero-icons{margin-left:auto;font-size:48px;opacity:0.9}
+
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.card h3{margin-top:0;color:var(--accent);text-transform:uppercase}
+.icon-circle{width:56px;height:56px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:8px}
+.contact-card a{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;margin-top:8px}
+
+.cta{margin:18px 0;padding:14px;background:var(--card);border-radius:12px;text-align:center;box-shadow:0 6px 12px rgba(0,0,0,0.04)}
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);font-size:0.95rem}
+
+/* responsive */
+@media(max-width:900px){
+  .info-grid{grid-template-columns:1fr}
+  .hero-icons{font-size:42px}
+  .site-header .brand{font-size:1.4rem}
+}
